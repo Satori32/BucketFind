@@ -19,7 +19,7 @@ template<class Container>
 			return o.first;
 		}
 	}
-	return Container::value_type(-1);
+	return { -1 };
 }
 /** /
 
