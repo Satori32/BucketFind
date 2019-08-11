@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <algorithm>
 
+//MITライセンス　です。
 
 typedef std::vector<std::int64_t> DType;
 
