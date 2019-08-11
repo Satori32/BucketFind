@@ -2,16 +2,16 @@
 #include <vector>
 #include <cstdint>
 #include <algorithm>
-
+#include <map>
 //MITライセンス　です。
 
 typedef std::vector<std::int64_t> DType;
 
-typedef std::map<std::uint64_t, std::uint64_t> MType;
+typedef std::map<std::int64_t, std::uint64_t> MType;
 
-#include <map>
+
 template<class Container>
-std::intmax_t MakeHoge3(const Container& D) {
+ typename Container::value_type MakeHoge3(const Container& D) {
 	std::map < Container::value_type, std::uintmax_t> M;
 
 	for (auto& o : D) {
@@ -22,8 +22,7 @@ std::intmax_t MakeHoge3(const Container& D) {
 			return o.first;
 		}
 	}
-	return -1;
-
+	return Container::value_type(-1);
 }
 /** /
 std::int64_t MakeHoge2(const DType& D) {
