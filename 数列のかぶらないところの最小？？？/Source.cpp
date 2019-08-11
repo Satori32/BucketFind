@@ -7,9 +7,6 @@
 
 typedef std::vector<std::int64_t> DType;
 
-typedef std::map<std::int64_t, std::uint64_t> MType;
-
-
 template<class Container>
  typename Container::value_type MakeHoge3(const Container& D) {
 	std::map < Container::value_type, std::uintmax_t> M;
@@ -25,6 +22,9 @@ template<class Container>
 	return Container::value_type(-1);
 }
 /** /
+
+typedef std::map<std::int64_t, std::uint64_t> MType;
+
 std::int64_t MakeHoge2(const DType& D) {
 	MType M;
 
